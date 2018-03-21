@@ -63,7 +63,7 @@ set /P response=Add rule to %fileName%? (y/n):
 cls
 IF /i "%response%"=="n" (echo Rule Deleted & goto top) ELSE (echo Rule Added)
 
-echo netsh advfirewall firewall add rule profile=any name=%name% dir=%dir% action=%action% protocol=%protocol% localip=%localip% remoteip=%remoteip% %ports%>> %fileName%
+echo netsh advfirewall firewall add rule profile=any name="%name%" dir=%dir% action=%action% protocol=%protocol% localip=%localip% remoteip=%remoteip% %ports%>> %fileName%
 ENDLOCAL
 goto top
 
