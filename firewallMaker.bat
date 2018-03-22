@@ -56,7 +56,7 @@ IF /i "%response%"=="2" (set ports=remoteport=%remoteport%) ELSE IF /i "%respons
 echo.
 echo Created Rule:
 echo.
-echo netsh advfirewall firewall add rule profile=any name=%name% dir=%dir% action=%action% protocol=%protocol% localip=%localip% remoteip=%remoteip% %ports%
+echo netsh advfirewall firewall add rule profile=any name="%name%" dir=%dir% action=%action% protocol=%protocol% localip=%localip% remoteip=%remoteip% %ports%
 
 echo.
 set /P response=Add rule to %fileName%? (y/n):
